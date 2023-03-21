@@ -8,29 +8,23 @@
 </head>
 <body>
     <script>
-        var nomeCompleto=prompt("Digite seu nome completo:")
-
-        function inicialNome(){
-        nomes = nomeCompleto.split(" ")
-        
-        if(nomes.length>1){
-
-        var inicialPrimeiroNome = nomes[0].charAt(0)
-
-        var ultimoNome = nomes[nomes.length - 1]
-        var inicialUltimoNome = ultimoNome.charAt(0)
-
-        inicial = inicialPrimeiroNome+inicialUltimoNome
-
-        console.log(inicial.toUpperCase())
-        }else{
-           var inicial = nomes[0].charAt(0)
-           
-           console.log (inicial.toUpperCase()+"X")
-        }
+        function inicialNome(nomeCompleto){
+            var nomes = nomeCompleto.split(" ");
+            
+            if(nomes.length > 1){
+                var inicialPrimeiroNome = nomes[0].charAt(0);
+                var ultimoNome = nomes[nomes.length - 1];
+                var inicialUltimoNome = ultimoNome.charAt(0);
+                var inicial = inicialPrimeiroNome + inicialUltimoNome;
+                console.log(inicial.toUpperCase());
+            } else {
+                var inicial = nomes[0].charAt(0);
+                console.log(inicial.toUpperCase() + "X");
+            }
         }
 
-        inicialNome(nomeCompleto)
+        var nomeCompleto = prompt("Digite seu nome completo:");
+        inicialNome(nomeCompleto);
 
     </script>
 </body>
