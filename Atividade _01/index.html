@@ -8,7 +8,8 @@
 </head>
 <body>
     <script>
-        function inicialNome(nomeCompleto){
+        function inicialNome(){
+            var nomeCompleto = prompt("Digite seu nome completo:").toUpperCase();
             var nomes = nomeCompleto.split(" ");
             
             if(nomes.length > 1){
@@ -16,15 +17,14 @@
                 var ultimoNome = nomes[nomes.length - 1];
                 var inicialUltimoNome = ultimoNome.charAt(0);
                 var inicial = inicialPrimeiroNome + inicialUltimoNome;
-                console.log(inicial.toUpperCase());
             } else {
-                var inicial = nomes[0].charAt(0);
-                console.log(inicial.toUpperCase() + "X");
+                var inicialNome = nomes[0].charAt(0);
+                var inicial = inicialNome+"X";
             }
+            return inicial
         }
 
-        var nomeCompleto = prompt("Digite seu nome completo:");
-        inicialNome(nomeCompleto);
+        console.log(inicialNome());
 
     </script>
 </body>
